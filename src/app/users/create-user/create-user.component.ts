@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-create-user',
@@ -24,7 +25,7 @@ export class CreateUserComponent implements OnInit {
 
   onSubmit() {
     if (!this.form.valid) return;
-    this.dialogRef.close(this.form.value);
+    this.dialogRef.close({ id: uuidv4(), ...this.form.value });
   }
 
   onCancelClick(): void {

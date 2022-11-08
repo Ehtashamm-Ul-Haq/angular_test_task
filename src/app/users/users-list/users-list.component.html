@@ -42,7 +42,7 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>Actions</th>
         <td mat-cell *matCellDef="let element">
-          <mat-icon [routerLink]="['/user/profile', element.email]"
+          <mat-icon [routerLink]="['/user/profile', element.id]"
             >remove_red_eye</mat-icon
           >
         </td>
