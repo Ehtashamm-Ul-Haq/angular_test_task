@@ -1,0 +1,60 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-4">
+      <div class="card">
+        <div class="card-body text-center">
+          <img
+            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+            class="rounded-circle img-fluid img"
+          />
+          <h3 class="my-3">{{ user.firstName + " " + user.lastName }}</h3>
+          <p class="text-muted mb-1">
+            {{ user.about ?? "Full Stack Developer" }}
+          </p>
+          <p class="text-muted">{{ user.address }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-3">
+              <p class="mb-3">First Name</p>
+            </div>
+            <div class="col-9">
+              <p class="text-muted mb-0">{{ user.firstName }}</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-3">
+              <p class="mb-3">Last Name</p>
+            </div>
+            <div class="col-9">
+              <p class="text-muted mb-0">{{ user.lastName }}</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-3">
+              <p class="mb-3">Email</p>
+            </div>
+            <div class="col-9">
+              <p class="text-muted mb-0">{{ user.email }}</p>
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-3">
+              <p class="mb-3">Address</p>
+            </div>
+            <div class="col-9">
+              <p class="text-muted mb-0">{{ user.address }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

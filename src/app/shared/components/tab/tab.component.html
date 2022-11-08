@@ -1,0 +1,15 @@
+<mat-tab-group
+  #tabGroup
+  [backgroundColor]="backgroundColor"
+  [color]="color"
+  [disableRipple]="disableRipple"
+  [dynamicHeight]="dynamicHeight"
+  [headerPosition]="headerPosition"
+  [selectedIndex]="selectedIndex"
+  (selectedIndexChange)="selectedIndexChange($event)"
+  (selectedTabChange)="selectedTabChange($event)"
+  (focusChange)="focusChange($event)"
+>
+  <mat-tab #_blankTab></mat-tab>
+  <ng-content #outlet></ng-content>
+</mat-tab-group>

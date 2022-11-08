@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <div class="row d-flex align-items-center">
+    <h2>User Details</h2>
+    <app-tab>
+      <app-tab-item [title]="'User Info'">
+        <app-user-info [user]="userData"></app-user-info>
+      </app-tab-item>
+      <app-tab-item [title]="'History'">
+        <app-user-history></app-user-history>
+      </app-tab-item>
+    </app-tab>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<h2 mat-dialog-title>Create User</h2>
+<mat-dialog-content class="mat-typography">
+  <form class="m-4" [formGroup]="form">
+    <div class="mb-2">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>First Name</mat-label>
+        <input
+          matInput
+          placeholder="John"
+          formControlName="firstName"
+          required
+        />
+        <mat-error *ngIf="form.get('firstName')?.hasError('required')"
+          >First Name is required</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div class="mb-2">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Doe" formControlName="lastName" required />
+        <mat-error *ngIf="form.get('lastName')?.hasError('required')"
+          >Last Name is required</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div class="mb-2">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="example@gmail.com"
+          formControlName="email"
+          required
+        />
+        <mat-error *ngIf="form.get('email')?.hasError('required')"
+          >Email is required</mat-error
+        >
+        <mat-error *ngIf="form.get('email')?.hasError('email')"
+          >Email should be a valid email</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div class="mb-2">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address" required />
+        <mat-error *ngIf="form.get('address')?.hasError('required')"
+          >Address is required</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div class="mb-2">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>About</mat-label>
+        <textarea matInput formControlName="about" rows="5"></textarea>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button (click)="onSubmit()" color="primary">Create</button>
+</mat-dialog-actions>
