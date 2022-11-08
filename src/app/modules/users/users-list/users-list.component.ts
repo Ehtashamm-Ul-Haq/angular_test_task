@@ -29,7 +29,7 @@ export class UsersListComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     fromEvent(this.searchInput.nativeElement, 'keyup').pipe(
       map((event: any) => {
         return event.target.value.trim();

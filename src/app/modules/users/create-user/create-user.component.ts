@@ -13,7 +13,7 @@ export class CreateUserComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<CreateUserComponent>) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.form = new FormGroup({
       firstName: new FormControl("", [Validators.required]),
       lastName: new FormControl("", [Validators.required]),
@@ -28,7 +28,7 @@ export class CreateUserComponent implements OnInit {
     this.dialogRef.close({ id: uuidv4(), ...this.form.value });
   }
 
-  onCancelClick(): void {
+  onCancelClick() {
     this.dialogRef.close();
   }
 }
