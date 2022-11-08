@@ -8,7 +8,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserInfoComponent } from './user-profile/user-info/user-info.component';
 import { UserHistoryComponent } from './user-profile/user-history/user-history.component';
-import { SharedModule } from '../shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
