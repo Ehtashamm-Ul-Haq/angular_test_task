@@ -10,9 +10,7 @@ import { IUser, RootState } from 'src/app/core/interfaces';
 })
 export class UserProfileComponent implements OnInit {
   userId: string = '';
-  userData: any;
-
-  tabs = [{ title: "User Info", select: "app-user-info" }, { title: "History", select: "app-user-history" }]
+  userData!: IUser;
 
   constructor(private route: ActivatedRoute, private store: Store<RootState>,) {
     this.userId = this.route.snapshot.params['id'];
